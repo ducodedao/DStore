@@ -1,0 +1,54 @@
+@use "../../../scss" as *;
+
+.topbar {
+    background: #0f3460;
+    color: $white;
+
+    .topbarWrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.8rem;
+        height: 40px;
+
+        .topbarLeft {
+            display: flex;
+
+            svg {
+                margin-right: 0.5rem;
+                font-size: 0.8rem;
+            }
+
+            .phone {
+                display: flex;
+                align-items: center;
+                margin-right: 1rem;
+            }
+
+            .email {
+                display: flex;
+                align-items: center;
+            }
+
+            @include mobile {
+                margin: auto;
+            }
+        }
+
+        .topbarRight {
+            a {
+                &:not(:last-child) {
+                    margin-right: 1rem;
+                }
+
+                &:hover {
+                    color: $orange;
+                }
+            }
+
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+}

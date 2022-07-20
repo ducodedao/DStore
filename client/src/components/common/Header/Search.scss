@@ -1,0 +1,80 @@
+@use "../../../scss" as *;
+
+.search {
+    background-color: $white;
+    width: 100%;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+
+    .searchWrap {
+        display: flex;
+        align-items: center;
+        padding: 1rem 0;
+
+        .logo {
+            width: 5%;
+            margin-right: 5rem;
+            font-size: 2rem;
+            color: aqua;
+
+            @include tablet {
+                font-size: 1.6rem;
+            }
+
+            @include mobile {
+                font-size: 1.4rem;
+            }
+        }
+
+        .searchBox {
+            width: 95%;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+
+            @include mobile {
+                margin-left: 1rem;
+            }
+
+            svg {
+                width: 5%;
+
+                @include tablet {
+                    margin-left: 0.5rem;
+                }
+
+                @include mobile {
+                    width: 1rem;
+                }
+            }
+
+            input {
+                width: 95%;
+                padding: 0.5rem;
+                margin-right: 1.5rem;
+
+                @include tablet {
+                    margin-right: 1rem;
+                }
+
+                @include mobile {
+                    margin-right: 0.8rem;
+                }
+            }
+        }
+    }
+
+    &.shrink {
+        position: fixed;
+        top: $navbarShrinkHeight;
+        left: 0;
+        box-shadow: $boxShadow;
+        z-index: 99;
+
+        @include mobile {
+            top: $navbarMobileHeight;
+        }
+    }
+}

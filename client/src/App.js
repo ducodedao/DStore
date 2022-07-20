@@ -1,10 +1,13 @@
 import React, { Fragment } from 'react'
 import './App.scss'
+import Header from './components/common/Header/Header'
+import Footer from './components/common/Footer/Footer'
 
 const App = () => {
     return (
         <Fragment>
-            <div>DStore</div>
+            <Header />
+            <Footer />
         </Fragment>
     )
 }
