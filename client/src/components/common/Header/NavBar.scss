@@ -68,6 +68,8 @@
             font-size: 2.25rem;
 
             .navbarMenuRightItem {
+                cursor: pointer;
+
                 @include flex(center, center);
 
                 @include tablet {
@@ -78,6 +80,7 @@
 
         .navbarMenuLeft {
             .navbarMenuLeftClose {
+                cursor: pointer;
                 display: none;
             }
 
@@ -115,6 +118,7 @@
         }
 
         .navbarMenuMobileToggle {
+            cursor: pointer;
             display: none;
 
             @include tablet {
