@@ -98,19 +98,28 @@ const Footer = () => {
                                 <h4>Theo dõi chúng tôi</h4>
                                 <div className='footerSocial'>
                                     <p>
-                                        <Link to='https://www.facebook.com/ToNgoDu.Official/'>
+                                        <a
+                                            href='https://www.facebook.com/ToNgoDu.Official/'
+                                            target='blank'
+                                        >
                                             <FacebookIcon />
-                                        </Link>
+                                        </a>
                                     </p>
                                     <p>
-                                        <Link to='https://www.instagram.com/tongodu/'>
+                                        <a
+                                            href='https://www.instagram.com/tongodu/'
+                                            target='blank'
+                                        >
                                             <InstagramIcon />
-                                        </Link>
+                                        </a>
                                     </p>
                                     <p>
-                                        <Link to='https://www.youtube.com/channel/UCv_o_IdRvMNYgJdUPSdwK6Q'>
+                                        <a
+                                            href='https://www.youtube.com/channel/UCv_o_IdRvMNYgJdUPSdwK6Q'
+                                            target='blank'
+                                        >
                                             <YouTubeIcon />
-                                        </Link>
+                                        </a>
                                     </p>
                                 </div>
                             </Grid>
@@ -118,7 +127,11 @@ const Footer = () => {
                     </Container>
                 </div>
 
-                <div className='copyright'>Copyright 2022 by ducodedao.</div>
+                <div className='copyright'>
+                    <Container maxWidth='xl'>
+                        Copyright 2022 by ducodedao.
+                    </Container>
+                </div>
             </footer>
         </Fragment>
     )

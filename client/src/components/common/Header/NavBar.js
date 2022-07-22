@@ -7,6 +7,9 @@ import CloseIcon from '@mui/icons-material/Close'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import PersonIcon from '@mui/icons-material/Person'
+import Stack from '@mui/material/Stack'
+import IconButton from '@mui/material/IconButton'
+import Badge from '@mui/material/Badge'
 
 const NavBar = () => {
     const mainNav = [
@@ -61,6 +64,11 @@ const NavBar = () => {
                         >
                             <MenuIcon />
                         </div>
+                        <div className='logo'>
+                            <Link to='/'>
+                                <span>DStore</span>
+                            </Link>
+                        </div>
                         <div className='navbarMenuLeft' ref={menuLeft}>
                             <div
                                 className='navbarMenuLeftClose'
@@ -83,15 +91,21 @@ const NavBar = () => {
                             ))}
                         </div>
                         <div className='navbarMenuRight'>
-                            <div className='navbarMenuItem navbarMenuRightItem'>
-                                <FavoriteIcon />
-                            </div>
-                            <div className='navbarMenuItem navbarMenuRightItem'>
-                                <ShoppingCartIcon />
-                            </div>
-                            <div className='navbarMenuItem navbarMenuRightItem'>
-                                <PersonIcon />
-                            </div>
+                            <Stack direction='row' spacing={1}>
+                                <IconButton aria-label='favorite'>
+                                    <Badge badgeContent={1} color='secondary'>
+                                        <FavoriteIcon color='primary' />
+                                    </Badge>
+                                </IconButton>
+                                <IconButton aria-label='cart'>
+                                    <Badge badgeContent={1} color='secondary'>
+                                        <ShoppingCartIcon color='primary' />
+                                    </Badge>
+                                </IconButton>
+                                <IconButton aria-label='person'>
+                                    <PersonIcon color='primary' />
+                                </IconButton>
+                            </Stack>
                         </div>
                     </div>
                 </Container>
