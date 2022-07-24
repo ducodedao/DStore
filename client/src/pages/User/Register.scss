@@ -1,0 +1,44 @@
+.register {
+    .registerName,
+    .registerEmail,
+    .registerPassword {
+        margin-top: 1rem;
+    }
+
+    #registerImage {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            width: 2.2rem;
+            border-radius: 100%;
+        }
+
+        input {
+            width: 95%;
+            margin-left: 0.5rem;
+
+            &::file-selector-button {
+                width: 100%;
+                background-color: rgba(201, 199, 199, 0.733);
+                color: rgba(0, 0, 0, 0.623);
+                padding: 0 1vmax;
+                border-radius: 5px;
+                margin: 0%;
+                height: 2rem;
+                font-size: 0.8rem;
+                font-weight: 400;
+                z-index: 2;
+                border: none;
+                transition: all 0.5s;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: darken(rgba(201, 199, 199, 0.733), 10);
+                }
+            }
+        }
+    }
+}

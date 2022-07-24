@@ -102,7 +102,7 @@ const NavBar = () => {
                                         <ShoppingCartIcon color='primary' />
                                     </Badge>
                                 </IconButton>
-                                <IconButton aria-label='person'>
+                                <IconButton href='/login' aria-label='person'>
                                     <PersonIcon color='primary' />
                                 </IconButton>
                             </Stack>
