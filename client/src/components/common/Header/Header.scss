@@ -1,0 +1,31 @@
+@use '../../../scss' as *;
+
+.header {
+	background-color: $mainBg;
+	box-shadow: $boxShadow;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	.headerLogo {
+		color: $mainColor;
+		font-size: $fontSizeLarge;
+		padding: 0 0.5rem;
+
+		span {
+			display: block;
+			padding-bottom: 0.2rem;
+		}
+	}
+
+	.headerAction {
+		@include flex;
+
+		svg {
+			&:hover {
+				color: $mainColor;
+			}
+		}
+	}
+}
