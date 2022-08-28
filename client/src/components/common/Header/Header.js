@@ -2,13 +2,10 @@ import React, { Fragment } from 'react'
 import './Header.scss'
 import { Container, Tooltip, IconButton, Badge } from '@mui/material'
 import { Link } from 'react-router-dom'
-import {
-	FavoriteBorder,
-	ShoppingCartOutlined,
-	PersonOutlineOutlined,
-} from '@mui/icons-material'
+import { FavoriteBorder, ShoppingCartOutlined } from '@mui/icons-material'
 import HeaderSearch from '../HeaderSearch/HeaderSearch'
 import { toast } from 'react-toastify'
+import LoginRegister from '../../User/LoginRegister/LoginRegister'
 
 const Header = () => {
 	const notify = () => toast('The function has not been developed.')
@@ -48,11 +45,8 @@ const Header = () => {
 								</Badge>
 							</IconButton>
 						</Tooltip>
-						<Tooltip title='Login'>
-							<IconButton onClick={notify}>
-								<PersonOutlineOutlined />
-							</IconButton>
-						</Tooltip>
+
+						<LoginRegister />
 					</div>
 				</Container>
 			</header>
