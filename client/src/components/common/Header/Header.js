@@ -6,8 +6,12 @@ import { FavoriteBorder, ShoppingCartOutlined } from '@mui/icons-material'
 import HeaderSearch from '../HeaderSearch/HeaderSearch'
 import { toast } from 'react-toastify'
 import LoginRegister from '../../User/LoginRegister/LoginRegister'
+import { useSelector } from 'react-redux'
+import UserOption from '../../User/UserOption'
 
 const Header = () => {
+	const { isAuthenticated, user } = useSelector((state) => state.user)
+
 	const notify = () => toast('The function has not been developed.')
 
 	return (
@@ -46,7 +50,11 @@ const Header = () => {
 							</IconButton>
 						</Tooltip>
 
-						<LoginRegister />
+						{isAuthenticated ? (
+							<UserOption user={user} />
+						) : (
+							<LoginRegister />
+						)}
 					</div>
 				</Container>
 			</header>
